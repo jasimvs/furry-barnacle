@@ -92,3 +92,9 @@ If you want to differ from the spec, please include a short note what was done
 and why. Include a short note how to run your code. If you depend on a
 convention (e.g. order of arguments `-c` `--top n`) please document it.
 
+
+### How to build
+gradle build
+
+### How to run
+java -jar build/libs/audit-reporter-blank.jar resources/users.csv resources/files.csv -c --top 3
