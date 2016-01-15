@@ -15,9 +15,17 @@ public class Runner {
 
     public static void main(String[] args) throws IOException {
         Runner r = new Runner();
+        validateArgs(args);
         r.loadData(args[0], args[1]);
         r.parseOptionalArgs(args);
         r.run();
+    }
+
+    private static void validateArgs(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Please pass arguments: users.csv files.csv [-c] [--top numberOfFiles]");
+            System.exit(1);
+        }
     }
 
     private void setPrintStrategy(PrintStrategy printStrategy) {
